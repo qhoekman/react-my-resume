@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
     fontSize: 12,
+    fontFamily: 'Roboto',
     color: '#22292f',
     backgroundColor: '#e0e4e9'
   },
@@ -19,6 +20,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingLeft: 58,
     width: 128
+  },
+  small_icon: {
+    width: 12,
+    height: 12,
+    marginRight: 5
   },
   icon: {
     marginTop: -32,
@@ -38,7 +44,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#cdd1d7'
   },
   sidebar_content: {
-    marginTop: 30,
+    marginTop: 20,
+    paddingTop: 17,
     marginRight: -20,
     borderRight: '3 solid #f1592a'
   },
@@ -50,9 +57,12 @@ const styles = StyleSheet.create({
   subject_title: {
     fontSize: 14,
     color: '#000',
+    fontFamily: 'Lato',
     paddingBottom: 5
   },
-  subject_content: {},
+  subject_content: {
+    textAlign: 'left'
+  },
   section: {
     padding: 10,
     flex: 1
@@ -61,15 +71,16 @@ const styles = StyleSheet.create({
     paddingBottom: 52
   },
   pagetitle: {
-    paddingTop: 40,
+    paddingTop: 30,
     paddingBottom: 20,
-    fontSize: 18
+    fontSize: 20
   },
   name: {
     fontSize: 32,
     paddingBottom: 5
   },
   contactdetails: {
+    paddingRight: 10,
     paddingBottom: 0
   },
   timeline_item: {
@@ -103,6 +114,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     backgroundColor: '#2a3f4b'
   },
+  company: {
+    fontFamily: 'Roboto-Bold'
+  },
+  strong: {
+    fontFamily: 'Roboto-Bold'
+  },
   row: { display: 'flex', flexDirection: 'row' }
 });
 
@@ -115,20 +132,33 @@ export const MyDocument = () => (
         <View style={styles.sidebar_content}>
           <View style={styles.icon_container}>
             <View style={styles.circle} />
-            <Image style={styles.icon} src="assets/icon-location-pin.png" />
-          </View>
-          <View style={styles.subject}>
-            <Text style={styles.subject_title}>ADRES</Text>
-            <Text style={styles.subject_content}>Stationsstraat 85</Text>
-            <Text style={styles.subject_content}>7311NP, Apeldoorn</Text>
-          </View>
-          <View style={styles.icon_container}>
-            <View style={styles.circle} />
             <Image style={styles.icon} src="assets/icon-tag.png" />
           </View>
           <View style={styles.subject}>
             <Text style={styles.subject_title}>OVER MIJ</Text>
-            <Text style={styles.subject_content}>dddddddddddddddddd</Text>
+            <Text style={[styles.subject_content, { marginTop: 5, marginLeft: -10, marginRight: -10 }]}>
+              Ik zie mijzelf als een <Text style={styles.strong}>leergierig</Text> persoon met passie voor de techniek.
+            </Text>
+            <Text style={[styles.subject_content, { marginLeft: -10, marginRight: -10 }]}>
+              Ik hou van de <Text style={styles.strong}>innoverende</Text> wereld van de IT.
+            </Text>
+            <Text style={[styles.subject_content, { marginTop: 5, marginLeft: -10, marginRight: -10 }]}>
+              <Text style={styles.strong}>Communicatie</Text> is voor mij erg belangrijk en dat doe ik het liefst in een{' '}
+              <Text style={styles.strong}>Scrum team</Text>.
+            </Text>
+            <Text style={[styles.subject_content, { marginTop: 5, marginLeft: -10, marginRight: -10 }]}>
+              Wel zit ik met een <Text style={styles.strong}>visuele beperking</Text>, maar dat hindert mij niet om met
+              volle
+            </Text>
+            <Text style={[styles.subject_content, { marginLeft: -10, marginRight: -10 }]}>
+              <Text style={styles.strong}>motivatie</Text> en <Text style={styles.strong}>discipline</Text> aan de slag
+              te gaan.
+            </Text>
+            <Text style={[styles.subject_content, { marginTop: 5, marginLeft: -10, marginRight: -10 }]}>
+              In mijn vrije tijd ben ik graag bezig met <Text style={styles.strong}>sporten</Text>,{' '}
+              <Text style={styles.strong}>software ontwikkeling</Text>, <Text style={styles.strong}>tv series</Text> en{' '}
+              <Text style={styles.strong}>games</Text>.
+            </Text>
           </View>
           <View style={styles.icon_container}>
             <View style={styles.circle} />
@@ -157,13 +187,13 @@ export const MyDocument = () => (
             <View style={styles.subject_content}>
               <Text style={styles.interest_title}>Security Engineering</Text>
               <View style={styles.progressbar_bg}>
-                <View style={[styles.progressbar_fg, { width: '67%' }]} />
+                <View style={[styles.progressbar_fg, { width: '69%' }]} />
               </View>
             </View>
             <View style={styles.subject_content}>
               <Text style={styles.interest_title}>Cloud Architect</Text>
               <View style={styles.progressbar_bg}>
-                <View style={[styles.progressbar_fg, { width: '69%' }]} />
+                <View style={[styles.progressbar_fg, { width: '67%' }]} />
               </View>
             </View>
             <View style={styles.subject_content}>
@@ -179,7 +209,18 @@ export const MyDocument = () => (
         <View style={styles.header}>
           <Text style={styles.pagetitle}>CURRICULUM VITAE</Text>
           <Text style={styles.name}>Quido Hoekman</Text>
-          <Text style={styles.contactdetails}>(+31)6 55887578 quido@qhoekman.nl</Text>
+          <View style={styles.row}>
+            <Image style={styles.small_icon} src="assets/icon-phone.png" />
+
+            <Text style={styles.contactdetails}>(+31)6 55887578</Text>
+            <Image style={styles.small_icon} src="assets/icon-mail.png" />
+
+            <Text style={styles.contactdetails}> quido@qhoekman.nl</Text>
+          </View>
+          <View style={styles.row}>
+            <Image style={styles.small_icon} src="assets/icon-location-pin.png" />
+            <Text>Stationsstraat 85. 7311 NP, Apeldoorn</Text>
+          </View>
         </View>
         <View>
           <View style={{ display: 'flex', flexDirection: 'row', marginBottom: 20 }}>
@@ -187,21 +228,21 @@ export const MyDocument = () => (
               <View style={styles.circle} />
               <Image style={styles.icon} src="assets/icon-work.png" />
             </View>
-            <View style={(styles.subject, { textAlign: 'left', paddingTop: 10, paddingLeft: 10 })}>
+            <View style={(styles.subject, { textAlign: 'left', paddingTop: 8, paddingLeft: 10 })}>
               <Text style={styles.subject_title}>WERKERVARING</Text>
             </View>
           </View>
           <View style={styles.timeline_item}>
             <View style={{ width: 64, padding: 5, paddingTop: 0 }}>
-              <Text>Mei 2019</Text>
               <Text>Sep 2015</Text>
+              <Text>Mei 2019</Text>
             </View>
 
             <View style={{}}>
               <Image style={styles.timeline_bullet} src="assets/timeline-bullet.png" />
             </View>
             <View style={{ padding: 5, paddingTop: 0 }}>
-              <Text>Thinkwise Software</Text>
+              <Text style={styles.company}>Thinkwise Software</Text>
               <Text>Front-end Developer</Text>
             </View>
           </View>
@@ -215,7 +256,7 @@ export const MyDocument = () => (
               <Image style={styles.timeline_bullet} src="assets/timeline-bullet.png" />
             </View>
             <View style={{ padding: 5, paddingTop: 0 }}>
-              <Text>Pinkroccade Healthcare</Text>
+              <Text style={styles.company}>Pinkroccade Healthcare</Text>
               <Text>Software Engineer</Text>
             </View>
           </View>
@@ -229,7 +270,7 @@ export const MyDocument = () => (
               <Image style={styles.timeline_bullet} src="assets/timeline-bullet.png" />
             </View>
             <View style={{ padding: 5, paddingTop: 0 }}>
-              <Text>SOCS, Air Operations Control Station</Text>
+              <Text style={styles.company}>SOCS, Air Operations Control Station</Text>
               <Text>Junior Software Engineer</Text>
             </View>
           </View>
@@ -243,7 +284,7 @@ export const MyDocument = () => (
               <Image style={styles.timeline_bullet} src="assets/timeline-bullet-last.png" />
             </View>
             <View style={{ padding: 5, paddingTop: 0 }}>
-              <Text>Bronsco ICT</Text>
+              <Text style={styles.company}>Bronsco ICT</Text>
               <Text>Servicedeskmedewerker ICT en Web Developer</Text>
             </View>
           </View>
@@ -254,7 +295,7 @@ export const MyDocument = () => (
               <Image style={styles.icon} src="assets/icon-library.png" />
             </View>
 
-            <View style={(styles.subject, { textAlign: 'left', paddingTop: 10, paddingLeft: 10 })}>
+            <View style={(styles.subject, { textAlign: 'left', paddingTop: 8, paddingLeft: 10 })}>
               <Text style={styles.subject_title}>EDUCATIE</Text>
             </View>
           </View>
@@ -268,7 +309,7 @@ export const MyDocument = () => (
               <Image style={styles.timeline_bullet} src="assets/timeline-bullet.png" />
             </View>
             <View style={{ padding: 5, paddingTop: 0 }}>
-              <Text>Hogeschool van Arnhem en Nijmegen</Text>
+              <Text style={styles.company}>Hogeschool van Arnhem en Nijmegen</Text>
               <Text>Informatica Bachelor Degree</Text>
             </View>
           </View>
@@ -282,7 +323,7 @@ export const MyDocument = () => (
               <Image style={styles.timeline_bullet} src="assets/timeline-bullet.png" />
             </View>
             <View style={{ padding: 5, paddingTop: 0 }}>
-              <Text>ROC Aventus</Text>
+              <Text style={styles.company}>ROC Aventus</Text>
               <Text>ICT Beheer MBO4</Text>
             </View>
           </View>
@@ -296,7 +337,7 @@ export const MyDocument = () => (
               <Image style={styles.timeline_bullet} src="assets/timeline-bullet-last.png" />
             </View>
             <View style={{ padding: 5, paddingTop: 0 }}>
-              <Text>REA-College Ermelo</Text>
+              <Text style={styles.company}>REA-College Ermelo</Text>
               <Text>Servicedeskmedewerker ICT</Text>
             </View>
           </View>
@@ -306,7 +347,7 @@ export const MyDocument = () => (
               <View style={styles.circle} />
               <Image style={styles.icon} src="assets/icon-thumbs-up.png" />
             </View>
-            <View style={(styles.subject, { textAlign: 'left', paddingTop: 10, paddingLeft: 10 })}>
+            <View style={(styles.subject, { textAlign: 'left', paddingTop: 8, paddingLeft: 10 })}>
               <Text style={styles.subject_title}>PASSIE VOOR</Text>
             </View>
           </View>
@@ -346,6 +387,24 @@ export const MyDocument = () => (
             <Text style={styles.tag}>Electron</Text>
           </View>
         </View>
+      </View>
+      <View
+        style={[
+          styles.row,
+          {
+            position: 'absolute',
+            top: '98%',
+            height: 20,
+            width: '100%',
+            backgroundColor: '#f1592a',
+            color: '#fff',
+            textAlign: 'center'
+          }
+        ]}
+      >
+        <Text>
+          Bedankt voor het lezen van mijn CV, bekijk ook mijn website op <Text style={styles.strong}>qhoekman.nl</Text>
+        </Text>
       </View>
     </Page>
   </Document>
