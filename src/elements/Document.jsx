@@ -114,6 +114,9 @@ const styles = StyleSheet.create({
     color: '#fff',
     backgroundColor: '#2a3f4b'
   },
+  birthday: {
+    fontSize: 10
+  },
   company: {
     fontFamily: 'Roboto-Bold'
   },
@@ -208,7 +211,9 @@ export const MyDocument = () => (
       <View style={styles.section}>
         <View style={styles.header}>
           <Text style={styles.pagetitle}>CURRICULUM VITAE</Text>
-          <Text style={styles.name}>Quido Hoekman</Text>
+          <Text style={styles.name}>
+            Quido Hoekman <Text style={styles.birthday}>van 03-08-1991</Text>
+          </Text>
           <View style={styles.row}>
             <Image style={styles.small_icon} src="assets/icon-phone.png" />
 
