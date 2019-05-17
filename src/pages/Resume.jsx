@@ -237,7 +237,7 @@ const ResumePage = () => (
         <View style={styles.timeline_item}>
           <View style={{ width: 64, padding: 5, paddingTop: 0 }}>
             <Text>Sep 2015</Text>
-            <Text>Mei 2019</Text>
+            <Text>Nu</Text>
           </View>
 
           <View style={{}}>
@@ -344,7 +344,7 @@ const ResumePage = () => (
           </View>
         </View>
 
-        <View style={{ display: 'flex', flexDirection: 'row', marginTop: 13, marginBottom: 10 }}>
+        <View style={{ display: 'flex', flexDirection: 'row', marginTop: 17, marginBottom: 10 }}>
           <View style={(styles.icon_container, { paddingLeft: 0 })}>
             <View style={styles.circle} />
             <Image style={styles.icon} src="assets/icon-thumbs-up.png" />
@@ -365,30 +365,26 @@ const ResumePage = () => (
           <Text style={styles.tag}>KDE</Text>
           <Text style={styles.tag}>ZSH</Text>
           <Text style={styles.tag}>VSCode</Text>
-          <Text style={styles.tag}>Golang</Text>
+          <Text style={styles.tag}>.NET Core</Text>
         </View>
         <View style={styles.row}>
-          <Text style={styles.tag}>Elixir</Text>
           <Text style={styles.tag}>NodeJS</Text>
-          <Text style={styles.tag}>NPM</Text>
           <Text style={styles.tag}>Yarn</Text>
           <Text style={styles.tag}>HTML5</Text>
-        </View>
-        <View style={styles.row}>
           <Text style={styles.tag}>CSS3</Text>
           <Text style={styles.tag}>JavaScript</Text>
-          <Text style={styles.tag}>TypeScript</Text>
-          <Text style={styles.tag}>Jest</Text>
-          <Text style={styles.tag}>Vue</Text>
         </View>
         <View style={styles.row}>
+          <Text style={styles.tag}>TypeScript</Text>
+          <Text style={styles.tag}>Jest</Text>
           <Text style={styles.tag}>Webpack</Text>
           <Text style={styles.tag}>Gatsby</Text>
           <Text style={styles.tag}>React</Text>
-          <Text style={styles.tag}>React Native</Text>
-          <Text style={styles.tag}>Redux</Text>
         </View>
         <View style={styles.row}>
+          <Text style={styles.tag}>React Native</Text>
+          <Text style={styles.tag}>Redux</Text>
+          <Text style={styles.tag}>Apollo</Text>
           <Text style={styles.tag}>GraphQL</Text>
           <Text style={styles.tag}>Electron</Text>
         </View>

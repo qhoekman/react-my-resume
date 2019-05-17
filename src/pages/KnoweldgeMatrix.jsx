@@ -90,10 +90,9 @@ const data = [
   {
     skill: 'Libraries',
     siblings: [
-      { skill: 'jQuery', years: 4, rating: 4 },
       { skill: 'Lodash', years: 1.5, rating: 3 },
-      { skill: 'React', years: 2.5, rating: 4 },
-      { skill: 'Redux', years: 2, rating: 3 },
+      { skill: 'React', years: 3, rating: 4 },
+      { skill: 'Redux', years: 2.5, rating: 3 },
       { skill: 'RXJS', years: 2, rating: 3 }
     ],
     years: 4,
@@ -101,11 +100,7 @@ const data = [
   },
   {
     skill: 'Component Frameworks',
-    siblings: [
-      { skill: 'Bootstrap', years: 2, rating: 4 },
-      { skill: 'Ionic', years: 1, rating: 3 },
-      { skill: 'Material Design', years: 1.5, rating: 3 }
-    ],
+    siblings: [{ skill: 'Ionic', years: 1, rating: 3 }, { skill: 'Material Design', years: 1.5, rating: 3 }],
     years: 1.5,
     rating: 3
   },
@@ -128,7 +123,7 @@ const data = [
       { skill: 'EcmaScript6', years: 2.5, rating: 4 },
       { skill: 'EcmaScript7', years: 1.5, rating: 4 },
       { skill: 'JavaScript', years: 5, rating: 4 },
-      { skill: 'TypeScript', years: 2.5, rating: 4 }
+      { skill: 'TypeScript', years: 3, rating: 4 }
     ],
     years: 5,
     rating: 4
@@ -138,8 +133,7 @@ const data = [
     siblings: [
       { skill: 'ExpressJS', years: 1.5, rating: 3 },
       { skill: 'GatsbyJS', years: 1, rating: 3 },
-      { skill: 'NextJS', years: 1, rating: 3 },
-      { skill: 'Vue', years: 0.5, rating: 3 }
+      { skill: 'NextJS', years: 1, rating: 3 }
     ],
     years: 1.5,
     rating: 3
@@ -197,7 +191,7 @@ const toolingData = [
   {
     skill: 'Agile Tools',
     siblings: [
-      { skill: 'Azure DevOps / TFS', years: 2.5, rating: 2 },
+      { skill: 'Azure DevOps / TFS', years: 3, rating: 2 },
       { skill: 'Jira', years: 1, rating: 1 },
       { skill: 'Trello', years: 1, rating: 3 }
     ],
@@ -228,7 +222,7 @@ const backendSkillsData = [
   {
     skill: 'Programmeertalen',
     siblings: [
-      { skill: 'C#', years: 1, rating: 2 },
+      { skill: 'C#', years: 1, rating: 3 },
       { skill: 'Elixir', years: 0.5, rating: 1 },
       { skill: 'Golang', years: 0.5, rating: 1 },
       { skill: 'Java', years: 2, rating: 2 },
@@ -241,7 +235,7 @@ const backendSkillsData = [
   {
     skill: 'Frameworks',
     siblings: [
-      { skill: '.NET Core', years: 1, rating: 2 },
+      { skill: '.NET Core', years: 1, rating: 3 },
       { skill: 'ExpressJS', years: 4, rating: 3 },
       { skill: 'Phoenix', years: 0.5, rating: 1 },
       { skill: 'Rails', years: 1, rating: 2 },
